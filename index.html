@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Darwing Website</title>
+    <!-- link for bootstrap-icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- style sheet link -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="media.css">
+</head>
+<body>
+    <div class="container">
+        <section id="tool-board">
+            <div class="row">
+                <label for="titles">Shapes</label>
+                <ul class="Shapes">
+                    <li class="options tools" id="circle">
+                        <i class="bi bi-circle"></i>
+                        <span>Circle</span>
+                    </li>
+                    <li class="options tools" id="square">
+                        <i class="bi bi-square"></i>
+                        <span>Rectangle</span>
+                    </li>
+                    <li class="options tools" id="triangle">
+                        <i class="bi bi-triangle"></i>
+                        <span>Triangle</span>
+                    </li>
+                    <li class="options tools">
+                        <input type="checkbox" id="fill-color">
+                        <label for="fill-color">Fill Color</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <label for="titles">Options</label>
+                <ul>               
+                   <li class="options active tools" id="brush">
+                        <i class="bi bi-brush"></i>
+                        <span>Brush</span>
+                    </li>
+                    <li class="options tools" id="eraser">
+                        <i class="bi bi-eraser-fill"></i>
+                        <span>Eraser</span>
+                    </li>
+                    <li class="options tools" >
+                        <input type="range" id="size-slider">
+                        <label for="size-slider">Size Slider</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <label for="colorPicker">Color:</label>
+                <input type="color" id="colorPicker" value="#000000">
+            </div>
+            <div class="row">
+                <div class="buttons">
+                <button id="clear-board">Clear Board</button>
+                <button id="save-img">Save as Image</button>
+            </div>
+            </div>
+        </section>
+        <section id="Drawing-board">
+            <canvas></canvas>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
